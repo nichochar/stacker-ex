@@ -1,6 +1,8 @@
 defmodule Stacker.Server do
   use GenServer
 
+  @vsn "0" # Version the data (the state)
+
   def start_link stash_id do
     GenServer.start_link(__MODULE__, stash_id, name: __MODULE__)
   end
